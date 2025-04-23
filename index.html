@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infopedia Battle Cats</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<main class="content">
+
+  <!-- Menú Principal -->
+  <section id="inicio">
+    <h1>Infopedia Battle Cats</h1>
+    <h2>Menú Principal</h2>
+    <div class="botonera">
+      <button onclick="mostrarSeccion('guiaMenu')">Guía</button>
+      <button>Consejos</button>
+      <button>Unidades</button>
+      <button onclick="mostrarSeccion('enemigos')">Enemigos</button>
+      <button>Habilidades</button>
+      <button>Debilidades</button>
+      <button>Base</button>
+    </div>
+  </section>
+
+  <!-- Submenú de Guía -->
+  <section id="guiaMenu" style="display:none;">
+    <h2>Sección Guía</h2>
+    <div class="botonera">
+      <button onclick="mostrarSeccion('preguntas')">📘 Preguntas</button>
+      <button onclick="mostrarSeccion('gatoForo')">🐾 Gato Foro</button>
+    </div>
+    <button onclick="mostrarSeccion('inicio')" style="margin-top: 2rem;">⬅ Volver al menú</button>
+  </section>
+
+  <!-- Sección de Preguntas -->
+  <section id="preguntas" style="display:none;">
+    <h2>Preguntas y Respuestas</h2>
+    <p>The Battle Cats es un juego que puede ser fácil o difícil, dependiendo de tu estrategia y del conocimiento que tengas sobre tus unidades y enemigos.</p>
+    <form id="preguntaForm">
+      <input type="text" id="preguntaInput" placeholder="Escribe tu pregunta aquí..." required />
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="preguntasContainer">
+      <h4>Preguntas de otros visitantes:</h4>
+      <ul id="listaPreguntas"></ul>
+    </div>
+    <button onclick="mostrarSeccion('guiaMenu')" style="margin-top: 2rem;">⬅ Volver a Guía</button>
+  </section>
+
+  <!-- Sección Gato Foro -->
+  <section id="gatoForo" style="display:none;">
+    <h2>🐾 Gato Foro</h2>
+    <p>Aquí podrás hablar libremente sobre tus gatos favoritos, estrategias, curiosidades o compartir memes del juego 🐱.</p>
+    <p><em>(Próximamente habilitaremos comentarios y respuestas)</em></p>
+    <button onclick="mostrarSeccion('guiaMenu')" style="margin-top: 2rem;">⬅ Volver a Guía</button>
+  </section>
+
+  <!-- Sección Enemigos -->
+  <section id="enemigos" style="display:none;">
+    <h2>Tipos de Enemigos</h2>
+    <div class="botonera-vertical">
+      <button onclick="mostrarSeccion('enemigosSinRasgos')">Enemigos sin rasgos</button>
+      <button onclick="mostrarSeccion('enemigosrojos')">Enemigos rojos</button>
+      <button class="btn-negros">Enemigos negros</button>
+      <button class="btn-voladores">Enemigos voladores</button>
+      <button class="btn-alienigenas">Enemigos alienígenas</button>
+      <button class="btn-metalicos">Enemigos metálicos</button>
+      <button class="btn-angeles">Enemigos ángeles</button>
+      <button class="btn-zombis">Enemigos zombies</button>
+      <button class="btn-aku">Enemigos Aku</button>
+      <button class="btn-reliquias">Enemigos reliquia</button>
+    </div>
+    <button onclick="mostrarSeccion('inicio')" style="margin-top: 2rem;">⬅ Volver al menú</button>
+  </section>
+
+  <!-- Subsección: Enemigos sin rasgos -->
+  <section id="enemigosSinRasgos" style="display:none;">
+    <h2>Enemigos sin rasgos</h2>
+    <p>Los enemigos sin rasgos son enemigos muy comunes o débiles. No tienen una característica especial. Algunos son "fáciles" y otros "difíciles".</p>
+    <div class="botonera-vertical">
+      <button onclick="mostrarEnemigo('chucho')">Chucho</button>
+      <button onclick="mostrarEnemigo('serpi')">Serpi</button>
+      <button onclick="mostrarEnemigo('pandilla')">Pandilla</button>
+      <button onclick="mostrarEnemigo('hipo')">Hipo</button>
+      <button onclick="mostrarEnemigo('PingPong')">PingPong</button>
+      <button onclick="mostrarEnemigo('Gori')">Gori</button>
+
+    </div>
+    <button onclick="mostrarSeccion('enemigos')" style="margin-top: 2rem;">⬅ Volver</button>
+  </section>
+
+  <!-- Info: Chucho -->
+  <section id="chucho" style="display:none;">
+    <h2>Chucho</h2>
+    <ul>
+      <li><strong>HP:</strong> 90</li>
+      <li><strong>Daño:</strong> 8</li>
+      <li><strong>Atk Frame:</strong> 47</li>
+      <li><strong>Tipo de Ataque:</strong> Individual</li>
+      <li><strong>Velocidad:</strong> 5</li>
+      <li><strong>Habilidad:</strong> Ninguna</li>
+      <li><strong>Rasgo:</strong> sin rasgo</li>
+      <li><strong>ID:</strong> 000</li>
+      <li><strong>Rango:</strong> 110</li>
+      <li><strong>Descripción:</strong> Un perrete adorable y rival eterno de The Battle Cats. Este año quiere entrar a la universidad. Es un bichillo educado y manda regalos de cumpleaños a los gatos.</li>
+    </ul>
+    <button onclick="mostrarSeccion('enemigosSinRasgos')" style="margin-top: 1rem;">⬅ Volver</button>
+  </section>
+
+  <!-- Info: Serpi -->
+  <section id="serpi" style="display:none;">
+    <h2>Serpi</h2>
+    <ul>
+      <li><strong>HP:</strong> 100</li>
+      <li><strong>Daño:</strong> 15</li>
+      <li><strong>Atk Frame:</strong> 37</li>
+      <li><strong>Tipo de Ataque:</strong> Individual</li>
+      <li><strong>Velocidad:</strong> 8</li>
+      <li><strong>Habilidad:</strong> Ninguna</li>
+      <li><strong>Rasgo:</strong> sin rasgo</li>
+      <li><strong>ID:</strong> 001</li>
+      <li><strong>Descripción:</strong> Utiliza acuarelas como pintura corporal. Por eso le da tanto repelús el agua. Cualquier relación con el juego es puramente casual.</li>
+    </ul>
+    <button onclick="mostrarSeccion('enemigosSinRasgos')" style="margin-top: 1rem;">⬅ Volver</button>
+  </section>
+
+  <!-- Info: Pandilla -->
+  <section id="pandilla" style="display:none;">
+    <h2>Pandilla</h2>
+    <ul>
+      <li><strong>HP:</strong> 200</li>
+      <li><strong>Daño:</strong> 20</li>
+      <li><strong>Atk Frame:</strong> 30</li>
+      <li><strong>Tipo de Ataque:</strong> Individual</li>
+      <strong>Velocidad:</strong> 10</li>li><
+      <li><strong>Habilidad:</strong> Ninguna</li>
+      <li><strong>Rasgo:</strong> sin rasgo</li>
+      <li><strong>ID:</strong> 002</li>
+      <li><strong>Rango:</strong> 110</li>
+      <li><strong>Descripción:</strong> Un puñado de enclenques que se juntan de vez en cuando. Se conocieron por internet. Sorprendentemente, todos son bastante ricos.</li>
+    </ul>
+    <button onclick="mostrarSeccion('enemigosSinRasgos')" style="margin-top: 1rem;">⬅ Volver</button>
+  </section>
+
+  <!-- Info: Hipo -->
+  <section id="hipo" style="display:none;">
+    <h2>Hipo</h2>
+    <ul>
+      <li><strong>HP:</strong> 1000</li>
+      <li><strong>Daño:</strong> 100</li>
+      <li><strong>Atk Frame:</strong> 67</li>
+      <li><strong>Tipo de Ataque:</strong> Área</li>
+      <li><strong>Velocidad:</strong> 4</li>
+      <li><strong>Rango:</strong> 160</li>
+      <li><strong>Habilidad:</strong> Ninguna</li>
+      <li><strong>Rasgo:</strong> sin rasgo</li>
+      <li><strong>ID:</strong> 003</li>
+      <li><strong>Descripción:</strong> Este peligroso hipopótamo confía plenamente en su resistencia y su poder. Tiene un multiataque espectacular. No tenemos claro su género.</li>
+    </ul>
+    <button onclick="mostrarSeccion('enemigosSinRasgos')" style="margin-top: 1rem;">⬅ Volver</button>
+  </section>
+
+  <!-- Info: PingPong -->
+  <section id="PingPong" style="display:none;">
+    <h2>PingPong</h2>
+    <ul>
+      <li><strong>HP:</strong> 1300</li>
+      <li><strong>Daño:</strong> 100</li>
+      <li><strong>Atk Frame:</strong> 24</li>
+      <li><strong>Tipo de Ataque:</strong> Individual</li>
+      <li><strong>Rango:</strong> 150</li>
+      <li><strong>Velocidad:</strong> 11</li>
+      <li><strong>Habilidad:</strong> Ninguna</li>
+      <li><strong>Rasgo:</strong> sin rasgo</li>
+      <li><strong>ID:</strong> 005</li>
+      <li><strong>Descripción:</strong> Le flipan las pelis de kungfú. Su sueño es que lo escojan para una peli de Hollywood. Es autodidacta y todo el kungfú que sabe lo ha aprendido en internet.</li>
+    </ul>
+    <button onclick="mostrarSeccion('enemigosSinRasgos')" style="margin-top: 1rem;">⬅ Volver</button>
+  </section>
+
+  <!-- Info: Gori -->
+  <section id="Gori" style="display:none;">
+    <h2>Gori</h2>
+    <ul>
+      <li><strong>HP:</strong> 1000</li>
+      <li><strong>Daño:</strong> 80</li>
+      <li><strong>Atk Frame:</strong> 16</li>
+      <li><strong>Tipo de Ataque:</strong> Area</li>
+      <li><strong>Rango:</strong> 150</li>
+      <li><strong>Velocidad:</strong> 11</li>
+      <li><strong>Habilidad:</strong> Ninguna</li>
+      <li><strong>Rasgo:</strong> sin rasgo</li>
+      <li><strong>ID:</strong> 006</li>
+      <li><strong>Descripción:</strong> Lo echaron del zoológico "por su belleza picassiana". No tiene trabajo ni estudios, asi que se dio al juego y la bebida.</li>
+    </ul>
+    <button onclick="mostrarSeccion('enemigosSinRasgos')" style="margin-top: 1rem;">⬅ Volver</button>
+  </section>
+
+<!-- Subsección: Enemigos rojos -->
+<section id="enemigosrojos" style="display:none;">
+  <h2>Enemigos rojos</h2>
+  <p>Los enemigos rojos se caracterizan por ser más rápidos y con más vida que los enemigos sin rasgos, algunos tienen habilidades especiales. Pero son los enemigos con más unidades fuertes en ellos, siendo una desventaja.</p>
+  <div class="botonera-vertical">
+    <button onclick="mostrarEnemigo('Cerdi', 'enemigosrojos')">Cerdi</button>
+    <button onclick="mostrarEnemigo('Señor Foca', 'enemigosrojos')">Señor Foca</button>
+  </div>
+  <button onclick="mostrarSeccion('enemigos')" style="margin-top: 2rem;">⬅ Volver</button>
+</section>
+
+<!-- Info: Cerdi -->
+<section id="Cerdi" style="display:none;">
+  <h2>Cerdi</h2>
+  <ul>
+    <li><strong>HP:</strong> 1500</li>
+    <li><strong>Daño:</strong> 120</li>
+    <li><strong>Atk Frame:</strong> 73</li>
+    <li><strong>Tipo de Ataque:</strong> Area</li>
+    <li><strong>Rango:</strong> 150</li>
+    <li><strong>Velocidad:</strong> 5</li>
+    <li><strong>Habilidad:</strong> Ninguna</li>
+    <li><strong>Rasgo:</strong> rojo</li>
+    <li><strong>ID:</strong> 004</li>
+    <li><strong>Descripción:</strong> Le gusta ir al salón de belleza a broncearse, por eso tiene color gamba. nació en una granja ecologica. ¿sabias que a los cerdos les encanta limpiar?.</li>
+
+    <li><strong>Dato del creador:</strong> no manches como asi?</li>
+  </ul>
+  <button onclick="mostrarSeccion('enemigosrojos')" style="margin-top: 1rem;">⬅ Volver</button>
+</section>
+
+<!-- Info: Señor Foca -->
+<section id="Señor Foca" style="display:none;">
+  <h2>Señor Foca</h2>
+  <ul>
+    <li><strong>HP:</strong> 2500</li>
+    <li><strong>Daño:</strong> 150</li>
+    <li><strong>Atk Frame:</strong> 23</li>
+    <li><strong>Tipo de Ataque:</strong> Area</li>
+    <li><strong>Rango:</strong> 170</li>
+    <li><strong>Velocidad:</strong> 10</li>
+    <li><strong>Habilidad:</strong> Ninguna</li>
+    <li><strong>Rasgo:</strong> rojo</li>
+    <li><strong>ID:</strong> 008</li>
+    <li><strong>Descripción:</strong> Llegó a la gran ciudad desde las costas tranquilas. Queria llamar aún mas la atención, asi que se pinto de rojo.</li>
+
+    <li><strong>Dato del creador:</strong> no le veo sentido eso.. ademas no es la pintura toxica para los animales? bueno no se que le veo sentido a un juego donde los gatos dominan el universo
+  </ul>
+  <button onclick="mostrarSeccion('enemigosrojos')" style="margin-top: 1rem;">⬅ Volver</button>
+</section>
+
+</main>
+
+<footer>
+  <p>© Infopedia sobre gatos de batalla 2025. Proyecto fan sin fines de lucro.</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+  function mostrarSeccion(id) {
+    const secciones = document.querySelectorAll("main > section");
+    secciones.forEach(sec => sec.style.display = "none");
+    document.getElementById(id).style.display = "block";
+  }
+
+  function mostrarEnemigo(id) {
+    const secciones = document.querySelectorAll("main > section");
+    secciones.forEach(sec => sec.style.display = "none");
+    document.getElementById(id).style.display = "block";
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById("preguntaForm");
+    const lista = document.getElementById("listaPreguntas");
+    if (form) {
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const pregunta = document.getElementById("preguntaInput").value.trim();
+        if (pregunta) {
+          const item = document.createElement("li");
+          item.innerHTML = `<strong>Pregunta:</strong> ${pregunta}<br>
+            <label>Responder:</label> <input type="text" class="respuestaInput" placeholder="Escribe tu respuesta..." />
+            <button onclick="responder(this)">Enviar</button>
+            <div class="respuestaTexto"></div>`;
+          lista.appendChild(item);
+          form.reset();
+        }
+      });
+    }
+  });
+
+  function responder(boton) {
+    const input = boton.previousElementSibling;
+    const textoRespuesta = input.value.trim();
+    if (textoRespuesta) {
+      const contenedor = boton.nextElementSibling;
+      contenedor.innerHTML = `<strong>Respuesta:</strong> ${textoRespuesta}`;
+      boton.style.display = 'none';
+      input.style.display = 'none';
+    }
+  }
+</script>
+
+</body>
+</html>
